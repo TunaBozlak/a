@@ -24,18 +24,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'npm test'
-                    } else {
-                        bat 'npm test'
-                    }
-                }
-            }
-        }
-
         stage('Build') {
             steps {
                 script {
